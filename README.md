@@ -97,3 +97,66 @@ whenever you run rust program using rustc it produces the .exe file with the sam
 `rustc Hello_World.rs -o First`
 
 then it produces the files like First.exe
+
+## managing bigger project
+
+compiling single file with rust compiler is works fine,but as the project grows bigger bigger with the n number of files compiling all of them individually and combining htem will be tedious task.That's where cargo comes in.
+
+It is a rusts build system and it's package manager.it handles all the compiling and combining and downloading libraries things.libraryies in rust called as crates
+
+cargo installs already when we installed the rust itself,so to confirm type in this command in terminal:`cargo --version` you will see a version number
+
+### creating project with cargo
+
+`cargo new test_cargo`
+
+this command will create a direcoty like this
+
+![image](https://user-images.githubusercontent.com/86939592/230785299-d34a703b-60f0-42a3-9d52-9d32944bdcc6.png)
+
+go into the directory using the command `cd test_cargo`
+
+here we have one directory and one file called `Cargo.toml` if you ever work with nodejs it is same sa the package.json which stores the metadata about the libraries and projects
+
+after opening the Cargo.toml file it looks like this:
+
+![image](https://user-images.githubusercontent.com/86939592/230785437-786f3841-496b-45b1-b0dd-00538bcf154b.png)
+
+here in the first part `[package]` it means our project is package.package means group of codes that other programmers can use
+
+after that we got all the basic info about our project
+
+then there is a line `[dependencies]` it means that the all the required libraries for the projects is going to start from here (i.e..) the dependencies section starts here
+
+
+and then we have a directory also called `src`, once we get into src folder we have a file named as `main.rs` and it contains a basic boilerplate code that we have already discussed in the previous section
+
+![image](https://user-images.githubusercontent.com/86939592/230785638-ee4c41e3-6716-4644-b4bf-d05f974b429f.png)
+
+
+and that's the tour to the cargo and to compile this project just type in this command : `cargo build` after running this command we got a target folder
+
+![image](https://user-images.githubusercontent.com/86939592/230785754-4586a159-f5a2-424d-a68e-68cea9c2ca8f.png)
+
+then in target folder we have a debug and inside debug we have `test_cargo.exe` which is our binary file,so to run this we can do like
+
+`./target/debug/test_cargo.exe`
+
+or else we can build and run the project simultaneously with one command: `cargo run` this will compile and run the project for you
+
+![image](https://user-images.githubusercontent.com/86939592/230785929-f3b90e6d-9902-4266-8e9f-e904ddc0c41d.png)
+
+
+and this is how you can handle complex projects with cargo
+
+
+
+## Summary:
+
+- rust is newly emerged language and it can do systems prorgramming and low level work with insane performance
+- we learn how to write basic hello world prorgam and discussed about the syntax
+- and also learned how to manage bigger projects with cargo
+
+ ### Thank you 
+
+This is the session for this chapter,see you on next part!!
